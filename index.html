@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expandable Row Table</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Search Bar -->
+    <input type="text" id="searchBar" placeholder="Search for sellers..." onkeyup="filterTable()">
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Seller</th>
+                <th>Cost</th>
+                <th># of Pods</th>
+                <th>Price per Pod</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            <tr class="expandable-row" onclick="toggleRow(this)">
+                <td colspan="4">Seller 1</td>
+            </tr>
+            <tr class="detail-row" style="display: none;">
+                <td>SellerTag</td>
+                <td>$</td>
+                <td>#</td>
+                <td>$</td>
+            </tr>
+            <tr class="detail-row" style="display: none;">
+                <td>SellerTag</td>
+                <td>$</td>
+                <td>#</td>
+                <td>$</td>
+            </tr>
+            <tr class="detail-row" style="display: none;">
+                <td colspan="3">Market Average per Pod</td>
+                <td>$</td>
+            </tr>
+
+            <tr class="expandable-row" onclick="toggleRow(this)">
+                <td colspan="4">Seller 2</td>
+            </tr>
+            <tr class="detail-row" style="display: none;">
+                <td>SellerTag</td>
+                <td>$</td>
+                <td>#</td>
+                <td>$</td>
+            </tr>
+            <tr class="detail-row" style="display: none;">
+                <td>SellerTag</td>
+                <td>$</td>
+                <td>#</td>
+                <td>$</td>
+            </tr>
+            <tr class="detail-row" style="display: none;">
+                <td colspan="3">Market Average per Pod</td>
+                <td>$</td>
+            </tr>
+
+            <tr class="expandable-row" onclick="toggleRow(this)">
+                <td colspan="4">Seller 3</td>
+            </tr>
+            <tr class="detail-row" style="display: none;">
+                <td>SellerTag</td>
+                <td>$</td>
+                <td>#</td>
+                <td>$</td>
+            </tr>
+            <tr class="detail-row" style="display: none;">
+                <td>SellerTag</td>
+                <td>$</td>
+                <td>#</td>
+                <td>$</td>
+            </tr>
+            <tr class="detail-row" style="display: none;">
+                <td colspan="3">Market Average per Pod</td>
+                <td>$</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
